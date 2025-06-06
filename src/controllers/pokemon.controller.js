@@ -15,7 +15,7 @@ export const PokemonController = {
     if (!pokemon) return res.status(404).json({ message: 'Not found' });
     res.json(pokemon);
   },
-
+ 
   async update(req, res) {
     const updated = await PokemonService.update(req.params.id, req.body);
     if (!updated) return res.status(404).json({ message: 'Not found' });
